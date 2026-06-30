@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Tableau de bord',
+    'welcome_back' => 'Heureux de vous revoir, :name !',
+    'dashboard_description' => 'Gérez vos services actifs, vos factures, vos tickets et obtenez les dernières informations ici.',
+    'open_tickets' => 'Tickets ouverts',
+    'unpaid_invoices' => 'Factures impayées',
+    'active_services' => 'Services actifs',
+    'view_all' => 'Voir tout',
+    'services' => 'Services',
+    'balance' => 'Solde',
+    'next_invoice' => 'Prochaine facture',
+    'no_pending_invoices' => 'Aucune facture en attente',
+    'items' => 'Articles',
+    'active' => 'Actif',
+    'pending' => 'En attente',
+    'suspended' => 'Suspendu',
+    'cancelled' => 'Annulé',
+    'paid' => 'Payé',
+    'open' => 'Ouvert',
+    'closed' => 'Fermé',
+    'replied' => 'Répondu',
+    'need_some_help' => 'Besoin d\'aide ?',
+    'join_discord' => 'Rejoindre le Discord',
+    'join_discord_to_get_help' => 'Rejoignez notre Discord pour obtenir de l\'aide concernant votre achat.',
+    'announcement' => 'Annonce',
+];

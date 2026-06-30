@@ -1,0 +1,25 @@
+{
+  "themes/nano/css/app.css": {
+    "file": "assets/app-WRPjP7Pj.css",
+    "src": "themes/nano/css/app.css",
+    "isEntry": true,
+    "names": [
+      "app.css"
+    ]
+  },
+  "themes/nano/js/app.js": {
+    "file": "assets/app-B91Kqe9k.js",
+    "name": "app",
+    "src": "themes/nano/js/app.js",
+    "isEntry": true
+  },
+  "themes/nano/js/easymde-entry.js": {
+    "file": "assets/easymde-entry-C7-U2fh2.js",
+    "name": "easymde-entry",
+    "src": "themes/nano/js/easymde-entry.js",
+    "isEntry": true,
+    "css": [
+      "assets/easymde-entry-BojLxDwQ.css"
+    ]
+  }
+}

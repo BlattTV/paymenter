@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Kontrollpanel',
+    'welcome_back' => 'Välkommen tillbaka :name!',
+    'dashboard_description' => 'Hantera dina aktiva tjänster, fakturor, biljetter och håll dig uppdaterad här.',
+    'open_tickets' => 'Öppna ärenden',
+    'unpaid_invoices' => ' Obetalda fakturor',
+    'active_services' => 'Aktiva tjänster',
+    'view_all' => 'Visa Alla',
+    'services' => 'Tjänster',
+    'balance' => 'Saldo',
+    'next_invoice' => 'Nästa faktura',
+    'no_pending_invoices' => 'Inga obetalda fakturor',
+    'items' => 'Artiklar',
+    'active' => 'Aktiv',
+    'pending' => 'Väntar',
+    'suspended' => 'Avstängd',
+    'cancelled' => 'Avbruten',
+    'paid' => 'Betald',
+    'open' => 'Öppen',
+    'closed' => 'Stängd',
+    'replied' => 'Besvarad',
+    'need_some_help' => 'Behöver du hjälp?',
+    'join_discord' => 'Gå med i Discord',
+    'join_discord_to_get_help' => 'Gå med i vår Discord för att få hjälp med ditt köp.',
+    'announcement' => 'Meddelande',
+];

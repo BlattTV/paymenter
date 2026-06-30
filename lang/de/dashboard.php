@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Übersicht',
+    'welcome_back' => 'Willkommen zurück :name!',
+    'dashboard_description' => 'Verwalten Sie hier Ihre aktiven Dienste, Rechnungen und Tickets und bleiben Sie auf dem Laufenden.',
+    'open_tickets' => 'Offene Tickets',
+    'unpaid_invoices' => 'Offene Rechnungen',
+    'active_services' => 'Aktive Dienste',
+    'view_all' => 'Alles anzeigen',
+    'services' => 'Dienste',
+    'balance' => 'Guthaben',
+    'next_invoice' => 'Nächste Rechnung',
+    'no_pending_invoices' => 'Keine offenen Rechnungen',
+    'items' => 'Positionen',
+    'active' => 'Aktiv',
+    'pending' => 'Ausstehend',
+    'suspended' => 'Ausgesetzt',
+    'cancelled' => 'Storniert',
+    'paid' => 'Bezahlt',
+    'open' => 'Offen',
+    'closed' => 'Geschlossen',
+    'replied' => 'Beantwortet',
+    'need_some_help' => 'Brauchen Sie Hilfe?',
+    'join_discord' => 'Discord beitreten',
+    'join_discord_to_get_help' => 'Treten Sie unserem Discord bei, um Hilfe zu Ihrem Kauf zu erhalten.',
+    'announcement' => 'Ankündigung',
+];

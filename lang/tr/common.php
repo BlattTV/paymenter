@@ -1,0 +1,15 @@
+<?php
+
+return [
+    '' => '',
+    'button' => [
+        'view' => 'Görüntüle',
+        'view_all' => 'Tümünü Görüntüle',
+    ],
+    'confirm' => 'Onayla',
+    'cancel' => 'İptal',
+    'select' => [
+        'placeholder' => 'Lütfen :name seçin',
+    ],
+    'na' => 'Yok',
+];

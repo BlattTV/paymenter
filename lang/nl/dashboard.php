@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Dashboard',
+    'welcome_back' => 'Welkom terug, :name!',
+    'dashboard_description' => 'Beheer uw actieve diensten, facturen en tickets.',
+    'open_tickets' => 'Open tickets',
+    'unpaid_invoices' => 'Onbetaalde facturen',
+    'active_services' => 'Actieve services',
+    'view_all' => 'Bekijk alle',
+    'services' => 'Diensten',
+    'balance' => 'Saldo',
+    'next_invoice' => 'Volgende factuur',
+    'no_pending_invoices' => 'Geen openstaande facturen',
+    'items' => 'Items',
+    'active' => 'Actief',
+    'pending' => 'In behandeling',
+    'suspended' => 'Opgeschort',
+    'cancelled' => 'Geannuleerd',
+    'paid' => 'Betaald',
+    'open' => 'Open',
+    'closed' => 'Gesloten',
+    'replied' => 'Beantwoord',
+    'need_some_help' => 'Hulp nodig?',
+    'join_discord' => 'Word lid van Discord',
+    'join_discord_to_get_help' => 'Word lid van onze Discord voor hulp bij je aankoop.',
+    'announcement' => 'Aankondiging',
+];

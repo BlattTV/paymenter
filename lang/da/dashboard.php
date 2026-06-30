@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Kontrolpanel',
+    'welcome_back' => 'Velkommen tilbage :name!',
+    'dashboard_description' => 'Administrer dine aktive services, fakturaer, tickets og hold dig opdateret her.',
+    'open_tickets' => 'Åbne tickets',
+    'unpaid_invoices' => 'Ubetalte fakturaer',
+    'active_services' => 'Aktive services',
+    'view_all' => 'Vis alle',
+    'services' => 'Tjenester',
+    'balance' => 'Saldo',
+    'next_invoice' => 'Næste faktura',
+    'no_pending_invoices' => 'Ingen udestående fakturaer',
+    'items' => 'Varer',
+    'active' => 'Aktiv',
+    'pending' => 'Afventer',
+    'suspended' => 'Suspenderet',
+    'cancelled' => 'Annulleret',
+    'paid' => 'Betalt',
+    'open' => 'Åben',
+    'closed' => 'Lukket',
+    'replied' => 'Besvaret',
+    'need_some_help' => 'Brug for hjælp?',
+    'join_discord' => 'Deltag i Discord',
+    'join_discord_to_get_help' => 'Deltag i vores Discord for at få hjælp med dit køb.',
+    'announcement' => 'Meddelelse',
+];

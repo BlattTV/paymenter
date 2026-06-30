@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Panel',
+    'welcome_back' => 'Witaj z powrotem, :name!',
+    'dashboard_description' => 'Zarządzaj aktywnymi usługami, fakturami, zgłoszeniami i bądź tutaj na bieżąco.',
+    'open_tickets' => 'Otwarte zgłoszenia',
+    'unpaid_invoices' => 'Nieopłacone faktury',
+    'active_services' => 'Aktywne usługi',
+    'view_all' => 'Zobacz wszystkie',
+    'services' => 'Usługi',
+    'balance' => 'Saldo',
+    'next_invoice' => 'Następna faktura',
+    'no_pending_invoices' => 'Brak oczekujących faktur',
+    'items' => 'Pozycje',
+    'active' => 'Aktywna',
+    'pending' => 'Oczekująca',
+    'suspended' => 'Zawieszona',
+    'cancelled' => 'Anulowana',
+    'paid' => 'Opłacona',
+    'open' => 'Otwarte',
+    'closed' => 'Zamknięte',
+    'replied' => 'Odpowiedziano',
+    'need_some_help' => 'Potrzebujesz pomocy?',
+    'join_discord' => 'Dołącz do Discorda',
+    'join_discord_to_get_help' => 'Dołącz do naszego Discorda, aby uzyskać pomoc w sprawie zakupu.',
+    'announcement' => 'Ogłoszenie',
+];

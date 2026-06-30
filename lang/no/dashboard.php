@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Min side',
+    'welcome_back' => 'Velkommen tilbake, :name!',
+    'dashboard_description' => 'Behandle dine aktive tjenester, fakturaer, saker, og hold deg oppdatert her.',
+    'open_tickets' => 'Åpne saker',
+    'unpaid_invoices' => 'Ubetalte fakturaer',
+    'active_services' => 'Aktive tjenester',
+    'view_all' => 'Vis alle',
+    'services' => 'Tjenester',
+    'balance' => 'Saldo',
+    'next_invoice' => 'Neste faktura',
+    'no_pending_invoices' => 'Ingen utestående fakturaer',
+    'items' => 'Varer',
+    'active' => 'Aktiv',
+    'pending' => 'Venter',
+    'suspended' => 'Suspendert',
+    'cancelled' => 'Kansellert',
+    'paid' => 'Betalt',
+    'open' => 'Åpen',
+    'closed' => 'Lukket',
+    'replied' => 'Besvart',
+    'need_some_help' => 'Trenger du hjelp?',
+    'join_discord' => 'Bli med på Discord',
+    'join_discord_to_get_help' => 'Bli med på vår Discord for å få hjelp med kjøpet ditt.',
+    'announcement' => 'Kunngjøring',
+];

@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Panel',
+    'welcome_back' => 'Tekrar hoş geldin, :name!',
+    'dashboard_description' => 'Aktif hizmetlerini, faturalarını ve destek taleplerini buradan yönet ve güncel kal.',
+    'open_tickets' => 'Açık Talepler',
+    'unpaid_invoices' => 'Ödenmemiş Faturalar',
+    'active_services' => 'Aktif Hizmetler',
+    'view_all' => 'Tümünü Görüntüle',
+    'services' => 'Hizmetler',
+    'balance' => 'Bakiye',
+    'next_invoice' => 'Sonraki Fatura',
+    'no_pending_invoices' => 'Bekleyen fatura yok',
+    'items' => 'Kalemler',
+    'active' => 'Aktif',
+    'pending' => 'Beklemede',
+    'suspended' => 'Askıya Alındı',
+    'cancelled' => 'İptal Edildi',
+    'paid' => 'Ödendi',
+    'open' => 'Açık',
+    'closed' => 'Kapalı',
+    'replied' => 'Yanıtlandı',
+    'need_some_help' => 'Yardıma mı ihtiyacın var?',
+    'join_discord' => 'Discord\'a Katıl',
+    'join_discord_to_get_help' => 'Satın alımınla ilgili yardım almak için Discord\'umuza katıl.',
+    'announcement' => 'Duyuru',
+];

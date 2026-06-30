@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Kotinäkymä',
+    'welcome_back' => 'Tervetuloa takaisin, :name!',
+    'dashboard_description' => 'Hallitse aktiivisia palveluita, laskuja, tukipyyntöjä sekä pysy ajan tasalla täällä.',
+    'open_tickets' => 'Avoimet tukipyynnöt',
+    'unpaid_invoices' => 'Maksamattomat laskut',
+    'active_services' => 'Aktiiviset palvelut',
+    'view_all' => 'Näytä Kaikki',
+    'services' => 'Palvelut',
+    'balance' => 'Saldo',
+    'next_invoice' => 'Seuraava lasku',
+    'no_pending_invoices' => 'Ei avoimia laskuja',
+    'items' => 'Tuotteet',
+    'active' => 'Aktiivinen',
+    'pending' => 'Odottaa',
+    'suspended' => 'Keskeytetty',
+    'cancelled' => 'Peruutettu',
+    'paid' => 'Maksettu',
+    'open' => 'Avoin',
+    'closed' => 'Suljettu',
+    'replied' => 'Vastattu',
+    'need_some_help' => 'Tarvitsetko apua?',
+    'join_discord' => 'Liity Discordiin',
+    'join_discord_to_get_help' => 'Liity Discordiimme saadaksesi apua ostokseesi.',
+    'announcement' => 'Ilmoitus',
+];

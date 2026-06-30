@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Dashboard',
+    'welcome_back' => 'Bentornato, :name!',
+    'dashboard_description' => 'Gestisci i servizi attivi, le fatture, i biglietti e rimani aggiornato qui.',
+    'open_tickets' => 'Ticket Aperti',
+    'unpaid_invoices' => ' Fatture non pagate',
+    'active_services' => 'Servizi attivi',
+    'view_all' => 'Mostra tutti',
+    'services' => 'Servizi',
+    'balance' => 'Saldo',
+    'next_invoice' => 'Prossima fattura',
+    'no_pending_invoices' => 'Nessuna fattura in sospeso',
+    'items' => 'Articoli',
+    'active' => 'Attivo',
+    'pending' => 'In sospeso',
+    'suspended' => 'Sospeso',
+    'cancelled' => 'Annullato',
+    'paid' => 'Pagato',
+    'open' => 'Aperto',
+    'closed' => 'Chiuso',
+    'replied' => 'Risposto',
+    'need_some_help' => 'Hai bisogno di aiuto?',
+    'join_discord' => 'Unisciti a Discord',
+    'join_discord_to_get_help' => 'Unisciti al nostro Discord per ricevere assistenza sul tuo acquisto.',
+    'announcement' => 'Annuncio',
+];

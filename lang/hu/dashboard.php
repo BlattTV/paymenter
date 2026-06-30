@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'dashboard_title' => 'Vezérlőpult',
+    'welcome_back' => 'Üdv ismét, :name!',
+    'dashboard_description' => 'Kezeld aktív szolgáltatásaidat, díjbekérőidet és hibajegyeidet egy helyen és légy naprakész.',
+    'open_tickets' => 'Hibajegyek megnyitása',
+    'unpaid_invoices' => 'Fizetetlen számlák',
+    'active_services' => 'Aktív szolgáltatások',
+    'view_all' => 'Összes megtekintése',
+    'services' => 'Szolgáltatások',
+    'balance' => 'Egyenleg',
+    'next_invoice' => 'Következő számla',
+    'no_pending_invoices' => 'Nincsenek függőben lévő számlák',
+    'items' => 'Tételek',
+    'active' => 'Aktív',
+    'pending' => 'Függőben',
+    'suspended' => 'Felfüggesztve',
+    'cancelled' => 'Törölve',
+    'paid' => 'Fizetve',
+    'open' => 'Nyitott',
+    'closed' => 'Lezárva',
+    'replied' => 'Megválaszolva',
+    'need_some_help' => 'Segítségre van szükséged?',
+    'join_discord' => 'Csatlakozz a Discordhoz',
+    'join_discord_to_get_help' => 'Csatlakozz a Discordunkhoz, hogy segítséget kapj a vásárlásoddal kapcsolatban.',
+    'announcement' => 'Közlemény',
+];
