@@ -3,7 +3,7 @@
 return [
     'add_to_cart' => 'Zum Warenkorb hinzufügen',
     'view' => 'Anzeigen',
-    'checkout' => 'Zur Kasse',
+    'checkout' => 'Zahlungspflichtig bestellen',
     'remove' => 'Entfernen',
     'empty_cart' => 'Ihr Warenkorb ist leer',
     'total_today' => 'Heute zu bezahlender Betrag',
