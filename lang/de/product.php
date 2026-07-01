@@ -26,7 +26,7 @@ return [
     'tos_required' => 'Sie müssen die Nutzungsbedingungen akzeptieren',
     'description' => 'Beschreibung',
     'configure' => 'Konfigurieren',
-    'configure_options' => 'Konfigurieren Sie Ihre Optionen',
+    'configure_options' => 'Wählen Sie Ihre Konfiguration',
     'coupon' => 'Gutschein',
     'coupon_applied' => 'Gutschein angewendet',
     'due_today' => 'Heute fällig',
