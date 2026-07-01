@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Megrendelés',
     'view' => 'Megtekintés',
-    'checkout' => 'Fizetés',
+    'checkout' => 'Megrendelés fizetési kötelezettséggel',
+    'order_free' => 'Ingyenes megrendelés',
     'remove' => 'Eltávolítás',
     'empty_cart' => 'A kosarad üres',
     'total_today' => 'Összesen',

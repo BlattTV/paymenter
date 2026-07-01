@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Ajouter au panier',
     'view' => 'Afficher les offres',
-    'checkout' => 'Procéder à la commande',
+    'checkout' => 'Commander avec obligation de paiement',
+    'order_free' => 'Commander gratuitement',
     'remove' => 'Retirer du panier',
     'empty_cart' => 'Votre panier est vide',
     'total_today' => 'Montant total à régler',

@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Aan winkelwagen toevoegen',
     'view' => 'Weergeven',
-    'checkout' => 'Afrekenen',
+    'checkout' => 'Bestelling met betalingsverplichting',
+    'order_free' => 'Gratis bestellen',
     'remove' => 'Verwijder',
     'empty_cart' => 'Uw winkelwagen is leeg',
     'total_today' => 'Totale prijs vandaag',

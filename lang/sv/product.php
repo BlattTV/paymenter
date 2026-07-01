@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Lägg till i varukorg',
     'view' => 'Visa',
-    'checkout' => 'Checka ut',
+    'checkout' => 'Beställning med betalningsskyldighet',
+    'order_free' => 'Beställ gratis',
     'remove' => 'Ta bort',
     'empty_cart' => 'Din varukorg är tom',
     'total_today' => 'Totalt idag',

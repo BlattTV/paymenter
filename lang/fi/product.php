@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Lisää ostoskoriin',
     'view' => 'Näytä',
-    'checkout' => 'Ostoskori',
+    'checkout' => 'Tilaa maksuvelvollisena',
+    'order_free' => 'Tilaa ilmaiseksi',
     'remove' => 'Poista',
     'empty_cart' => 'Ostoskorisi on tyhjä',
     'total_today' => 'Yhteensä tänään',

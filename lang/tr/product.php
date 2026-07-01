@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Sepete ekle',
     'view' => 'Görüntüle',
-    'checkout' => 'Ödeme',
+    'checkout' => 'Ödeme yükümlülüğüyle sipariş ver',
+    'order_free' => 'Ücretsiz sipariş ver',
     'remove' => 'Kaldır',
     'empty_cart' => 'Sepetin boş',
     'total_today' => 'Bugün ödenecek',

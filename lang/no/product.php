@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Legg i handlekurv',
     'view' => 'Vis',
-    'checkout' => 'Til kassen',
+    'checkout' => 'Bestilling med betalingsforpliktelse',
+    'order_free' => 'Bestill gratis',
     'remove' => 'Fjern',
     'empty_cart' => 'Handlevognen er tom',
     'total_today' => 'Totalt i dag',

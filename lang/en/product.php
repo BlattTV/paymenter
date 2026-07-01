@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Add to cart',
     'view' => 'View',
-    'checkout' => 'Checkout',
+    'checkout' => 'Buy now',
+    'order_free' => 'Order for free',
     'remove' => 'Remove',
     'empty_cart' => 'Your cart is empty',
     'total_today' => 'Total today',

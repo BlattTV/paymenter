@@ -314,7 +314,7 @@ function getConfigIcon($optionName, $icons) {
                     <x-button.primary wire:click="checkout" wire:loading.attr="disabled" class="w-full py-3.5">
                         <x-loading target="checkout" />
                         <div class="flex items-center justify-center gap-2 no-wrap" wire:loading.remove wire:target="checkout">
-                            <span>{{ translate('product.checkout', 'Proceed to Payment') }}</span>
+                            <span>{{ ($total->price ?? 0) > 0 ? translate('product.checkout', 'Buy now') : translate('product.order_free', 'Order for free') }}</span>
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>

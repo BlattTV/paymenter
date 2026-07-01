@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Læg i kurv',
     'view' => 'Vis',
-    'checkout' => 'Til kassen',
+    'checkout' => 'Bestilling med betalingsforpligtelse',
+    'order_free' => 'Bestil gratis',
     'remove' => 'Fjern',
     'empty_cart' => 'Der er meget tomt her',
     'total_today' => 'Til betaling i dag',

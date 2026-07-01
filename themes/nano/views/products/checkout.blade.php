@@ -203,7 +203,7 @@
             @if (($product->stock > 0 || !$product->stock) && $product->price()->available)
                 <div class="mt-4">
                     <x-button.primary wire:click="checkout" wire:loading.attr="disabled">
-                        {{ $checkoutText }}
+                        {{ ($total->price ?? 0) > 0 ? $checkoutText : translate('product.order_free', 'Order for free') }}
                     </x-button.primary>
                 </div>
             @endif

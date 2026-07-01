@@ -3,7 +3,8 @@
 return [
     'add_to_cart' => 'Aggiungi al carrello',
     'view' => 'Visualizza',
-    'checkout' => 'Checkout',
+    'checkout' => 'Ordine con obbligo di pagamento',
+    'order_free' => 'Ordina gratuitamente',
     'remove' => 'Rimuovi',
     'empty_cart' => 'Il tuo carrello è vuoto',
     'total_today' => 'Totale oggi:',
