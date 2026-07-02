@@ -1,6 +1,47 @@
 @php
     $isInStock = $product->stock === null || $product->stock > 0;
     $isAvailable = $isInStock && $product->price()->available;
+
+    // SEO: Product structured data (rich results with price in Google)
+    $seoPrice = $product->price();
+    $seoProduct = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Product',
+        'name' => $product->name,
+        'url' => url()->current(),
+    ];
+    if ($product->description) {
+        $seoProduct['description'] = \Illuminate\Support\Str::limit(trim(strip_tags($product->description)), 300);
+    }
+    if ($product->image) {
+        $seoProduct['image'] = \Storage::url($product->image);
+    }
+    if ($seoPrice->available) {
+        $seoProduct['offers'] = [
+            '@type' => 'Offer',
+            'price' => number_format((float) $seoPrice->price, 2, '.', ''),
+            'priceCurrency' => $seoPrice->currency->code ?? config('settings.default_currency'),
+            'availability' => $isInStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+            'url' => url()->current(),
+        ];
+    }
+    $seoBreadcrumb = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => config('app.name'), 'item' => config('app.url')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => $product->category->name, 'item' => url('/products/' . ($product->category->full_slug ?: $product->category->slug))],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => $product->name, 'item' => url()->current()],
+        ],
+    ];
+@endphp
+
+@push('head')
+    <script type="application/ld+json">{!! json_encode($seoProduct, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+    <script type="application/ld+json">{!! json_encode($seoBreadcrumb, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+@endpush
+
+@php
     $stockLabel = $isInStock 
         ? (translate('product.in_stock', 'In Stock'))
         : (translate('product.out_of_stock', 'Out of Stock'));

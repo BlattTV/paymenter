@@ -1,2 +1,18 @@
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /cart
+Disallow: /dashboard
+Disallow: /account
+Disallow: /invoices
+Disallow: /services
+Disallow: /tickets
+Disallow: /login
+Disallow: /register
+Disallow: /password
+Disallow: /2fa
+Disallow: /oauth
+Disallow: /products/*/*/checkout
+Allow: /
+
+# Beim Deployment ergaenzen (eine Zeile, eigene Domain eintragen):
+# Sitemap: https://DEINE-DOMAIN.de/sitemap.xml

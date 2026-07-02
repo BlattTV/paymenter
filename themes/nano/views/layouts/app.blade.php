@@ -42,9 +42,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>
-        {{ config('app.name', 'Paymenter') }}
         @isset($title)
-            - {{ $title }}
+            {{ $title }} - {{ config('app.name', 'Paymenter') }}
+        @else
+            {{ config('app.name', 'Paymenter') }}
         @endisset
     </title>
        @livewireStyles
@@ -55,7 +56,7 @@
         <link rel="icon" href="{{ Storage::url(config('settings.favicon')) }}" type="image/png">
     @endif
     @isset($title)
-    <meta content="{{ isset($title) ? config('app.name', 'Paymenter') . ' - ' . $title : config('app.name', 'Paymenter') }}" property="og:title">
+    <meta content="{{ isset($title) ? $title . ' - ' . config('app.name', 'Paymenter') : config('app.name', 'Paymenter') }}" property="og:title">
     <meta content="{{ isset($title) ? config('app.name', 'Paymenter') . ' - ' . $title : config('app.name', 'Paymenter') }}" name="title">
     @endisset
     @php
@@ -92,6 +93,37 @@
     <meta name="theme-color" content="{{ theme('primary') }}">
 
     <meta name="robots" content="{{ theme('meta_robots', 'index,follow') }}">
+
+    {{-- SEO: canonical URL (strips query strings, avoids duplicate content) --}}
+    <link rel="canonical" href="{{ url()->current() }}">
+    <meta property="og:url" content="{{ url()->current() }}">
+
+    {{-- SEO: Organization + WebSite structured data --}}
+    @php
+        $seoOrganization = [
+            '@type' => 'Organization',
+            'name' => config('app.name'),
+            'url' => config('app.url'),
+        ];
+        if (config('settings.logo')) {
+            $seoOrganization['logo'] = \Storage::url(config('settings.logo'));
+        }
+        $seoGraph = [
+            '@context' => 'https://schema.org',
+            '@graph' => [
+                $seoOrganization,
+                [
+                    '@type' => 'WebSite',
+                    'name' => $metaSiteName ?? config('app.name'),
+                    'url' => config('app.url'),
+                ],
+            ],
+        ];
+    @endphp
+    <script type="application/ld+json">{!! json_encode($seoGraph, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+
+    {{-- Page-specific SEO tags pushed by individual views --}}
+    @stack('head')
 
     {{-- Analytics scripts are only loaded after the visitor consented (TTDSG/GDPR) --}}
     @php
