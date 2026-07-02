@@ -1,20 +1,29 @@
 <div>
 @php
-$heroText = theme('products_hero_text', 'Choose the perfect plan for your needs. All plans come with our industry-leading support and reliability.');
-$heroCtaText = theme('products_hero_cta_text', 'View Plans');
+$heroText = theme('products_hero_text');
+if (!$heroText || $heroText === 'Choose the perfect plan for your needs. All plans come with our industry-leading support and reliability.') { $heroText = 'Individuell konfigurierbare Gameserver – wähle RAM, CPU und Speicher genau nach deinem Bedarf.'; }
+$heroCtaText = theme('products_hero_cta_text');
+if (!$heroCtaText || $heroCtaText === 'View Plans') { $heroCtaText = 'Zu den Tarifen'; }
 $heroImage = theme('products_hero_image', '/nano/hero.png');
 
-$emptyProductsTitle = theme('products_empty_title', 'Empty! No products found.');
+$emptyProductsTitle = theme('products_empty_title');
+if (!$emptyProductsTitle || $emptyProductsTitle === 'Empty! No products found.') { $emptyProductsTitle = 'Keine Produkte gefunden.'; }
 $emptyProductsIcon = theme('products_empty_icon', 'ri-shopping-bag-3-line');
 
-$stockInStockLabel = theme('products_stock_in_stock', 'In Stock');
-$stockOutOfStockLabel = theme('products_stock_out_of_stock', 'Out of Stock');
+$stockInStockLabel = theme('products_stock_in_stock');
+if (!$stockInStockLabel || $stockInStockLabel === 'In Stock') { $stockInStockLabel = translate('product.in_stock', 'Auf Lager'); }
+$stockOutOfStockLabel = theme('products_stock_out_of_stock');
+if (!$stockOutOfStockLabel || $stockOutOfStockLabel === 'Out of Stock') { $stockOutOfStockLabel = translate('product.out_of_stock', 'Nicht auf Lager'); }
 
-$faqSectionTitle = theme('faq_section_title', 'Frequently Asked Questions');
-$faqSectionSubtitle = theme('faq_section_subtitle', "Got questions? We've got answers. Find everything you need to know about our hosting services.");
+$faqSectionTitle = theme('faq_section_title');
+if (!$faqSectionTitle || $faqSectionTitle === 'Frequently Asked Questions') { $faqSectionTitle = 'Häufige Fragen zu Minecraft-Servern'; }
+$faqSectionSubtitle = theme('faq_section_subtitle');
+if (!$faqSectionSubtitle || $faqSectionSubtitle === "Got questions? We've got answers. Find everything you need to know about our hosting services.") { $faqSectionSubtitle = 'Alles Wichtige rund um dein Minecraft-Hosting bei Hoelni-Hosting.'; }
 
-$networkSectionTitle = theme('reasons_section_title', "We've got you covered");
-$networkSectionSubtitle = theme('reasons_section_subtitle', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.');
+$networkSectionTitle = theme('reasons_section_title');
+if (!$networkSectionTitle || $networkSectionTitle === "We've got you covered") { $networkSectionTitle = 'Warum Hoelni-Hosting?'; }
+$networkSectionSubtitle = theme('reasons_section_subtitle');
+if (!$networkSectionSubtitle || $networkSectionSubtitle === 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.') { $networkSectionSubtitle = 'Leistungsstarkes Minecraft-Hosting aus Deutschland – schnell, zuverlässig und ohne versteckte Kosten.'; }
 
 $defaultReasons = [
     ['title' => 'Sofort startklar', 'description' => 'Dein Minecraft-Server wird automatisch eingerichtet und ist in der Regel in unter einer Minute spielbereit.', 'icon' => 'fa-solid fa-bolt', 'stat' => '< 1 Min', 'stat_label' => 'Einrichtung'],
@@ -194,30 +203,30 @@ if (is_array($productLabelsRaw)) {
                                 $unit = $plan->billing_unit;
                                 if ($period == 1) {
                                     $billingCycle = match ($unit) {
-                                        'hour' => 'per hour',
-                                        'day' => 'per day',
-                                        'week' => 'per week',
-                                        'month' => 'per month',
-                                        'year' => 'per year',
-                                        default => 'per billing cycle'
+                                        'hour' => 'pro Stunde',
+                                        'day' => 'pro Tag',
+                                        'week' => 'pro Woche',
+                                        'month' => 'pro Monat',
+                                        'year' => 'pro Jahr',
+                                        default => 'pro Abrechnungszeitraum'
                                     };
                                 } else {
                                     $unitPlural = match ($unit) {
-                                        'hour' => 'hours',
-                                        'day' => 'days',
-                                        'week' => 'weeks',
-                                        'month' => 'months',
-                                        'year' => 'years',
+                                        'hour' => 'Stunden',
+                                        'day' => 'Tage',
+                                        'week' => 'Wochen',
+                                        'month' => 'Monate',
+                                        'year' => 'Jahre',
                                         default => $unit . 's'
                                     };
-                                    $billingCycle = 'per ' . $period . ' ' . $unitPlural;
+                                    $billingCycle = 'alle ' . $period . ' ' . $unitPlural;
                                 }
                             } elseif ($plan && $plan->type === 'one-time') {
-                                $billingCycle = 'one-time';
+                                $billingCycle = 'einmalig';
                             } elseif ($plan && $plan->type === 'free') {
                                 $billingCycle = '';
                             } else {
-                                $billingCycle = 'per billing cycle';
+                                $billingCycle = 'pro Abrechnungszeitraum';
                             }
                         @endphp
 

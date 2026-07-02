@@ -54,26 +54,26 @@
         $unit = $plan->billing_unit;
         if ($period == 1) {
             $billingCycle = match($unit) {
-                'hour' => 'per hour',
-                'day' => 'per day',
-                'week' => 'per week',
-                'month' => 'per month',
-                'year' => 'per year',
+                'hour' => 'pro Stunde',
+                'day' => 'pro Tag',
+                'week' => 'pro Woche',
+                'month' => 'pro Monat',
+                'year' => 'pro Jahr',
                 default => ''
             };
         } else {
             $unitPlural = match($unit) {
-                'hour' => 'hours',
-                'day' => 'days',
-                'week' => 'weeks',
-                'month' => 'months',
-                'year' => 'years',
+                'hour' => 'Stunden',
+                'day' => 'Tage',
+                'week' => 'Wochen',
+                'month' => 'Monate',
+                'year' => 'Jahre',
                 default => $unit . 's'
             };
-            $billingCycle = 'per ' . $period . ' ' . $unitPlural;
+            $billingCycle = 'alle ' . $period . ' ' . $unitPlural;
         }
     } elseif ($plan && $plan->type === 'one-time') {
-        $billingCycle = 'one-time';
+        $billingCycle = 'einmalig';
     }
     
     $hasImage = $product->image;
@@ -84,7 +84,7 @@
     <div class="mb-6">
         <a href="{{ route('category.show', $category) }}" wire:navigate class="inline-flex items-center gap-2 text-sm text-muted hover:text-primary transition-colors">
             <x-ri-arrow-left-line class="size-4" />
-            <span>Back to {{ $category->name }}</span>
+            <span>Zurück zu {{ $category->name }}</span>
         </a>
     </div>
 

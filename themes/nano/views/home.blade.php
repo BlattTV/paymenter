@@ -482,7 +482,7 @@
                                         <a href="{{ $catLink }}" wire:navigate class="block mt-auto">
                                             <x-button.primary class="w-full h-12 rounded-t-none" size="md">
                                                 <x-ri-arrow-right-line class="size-5 mr-1.5" />
-                                                View Plans
+                                                Zu den Tarifen
                                             </x-button.primary>
                                         </a>
                                     </div>
@@ -513,30 +513,30 @@
                                         $unit = $plan->billing_unit;
                                         if ($period == 1) {
                                             $billingCycle = match($unit) {
-                                                'hour' => 'per hour',
-                                                'day' => 'per day',
-                                                'week' => 'per week',
-                                                'month' => 'per month',
-                                                'year' => 'per year',
-                                                default => 'per billing cycle'
+                                                'hour' => 'pro Stunde',
+                                                'day' => 'pro Tag',
+                                                'week' => 'pro Woche',
+                                                'month' => 'pro Monat',
+                                                'year' => 'pro Jahr',
+                                                default => 'pro Abrechnungszeitraum'
                                             };
                                         } else {
                                             $unitPlural = match($unit) {
-                                                'hour' => 'hours',
-                                                'day' => 'days',
-                                                'week' => 'weeks',
-                                                'month' => 'months',
-                                                'year' => 'years',
+                                                'hour' => 'Stunden',
+                                                'day' => 'Tage',
+                                                'week' => 'Wochen',
+                                                'month' => 'Monate',
+                                                'year' => 'Jahre',
                                                 default => $unit . 's'
                                             };
-                                            $billingCycle = 'per ' . $period . ' ' . $unitPlural;
+                                            $billingCycle = 'alle ' . $period . ' ' . $unitPlural;
                                         }
                                     } elseif ($plan && $plan->type === 'one-time') {
-                                        $billingCycle = 'one-time';
+                                        $billingCycle = 'einmalig';
                                     } elseif ($plan && $plan->type === 'free') {
                                         $billingCycle = '';
                                     } else {
-                                        $billingCycle = 'per billing cycle';
+                                        $billingCycle = 'pro Abrechnungszeitraum';
                                     }
                                     
                                     $buttonText = $isAvailable && theme('direct_checkout', false) ? __('product.add_to_cart') : 'Configure';
