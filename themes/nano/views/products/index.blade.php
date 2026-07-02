@@ -17,21 +17,22 @@ $networkSectionTitle = theme('reasons_section_title', "We've got you covered");
 $networkSectionSubtitle = theme('reasons_section_subtitle', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.');
 
 $defaultReasons = [
-    ['title' => 'Instant Setup', 'description' => 'Get online in minutes with our instant provisioning.', 'icon' => 'fa-solid fa-bolt', 'stat' => '1 min', 'stat_label' => 'Setup Time'],
-    ['title' => '99.9% Uptime', 'description' => 'Our servers are monitored 24/7 for maximum uptime.', 'icon' => 'fa-solid fa-server', 'stat' => '99.9%', 'stat_label' => 'Uptime'],
-    ['title' => 'DDoS Protection', 'description' => 'Advanced DDoS protection keeps your site safe.', 'icon' => 'fa-solid fa-shield-alt', 'stat' => '24/7', 'stat_label' => 'Protection'],
-    ['title' => 'Global Reach', 'description' => 'Serve your content quickly to users around the world.', 'icon' => 'fa-solid fa-globe', 'stat' => '40+', 'stat_label' => 'Countries Served'],
-    ['title' => 'Powerful Databases', 'description' => 'Fast and reliable data storage for demanding applications.', 'icon' => 'fa-solid fa-database', 'stat' => '500GB', 'stat_label' => 'Max Capacity'],
-    ['title' => 'Free SSL', 'description' => 'SSL certificates are included at no additional cost.', 'icon' => 'fa-solid fa-lock', 'stat' => '100%', 'stat_label' => 'Encrypted'],
+    ['title' => 'Sofort startklar', 'description' => 'Dein Minecraft-Server wird automatisch eingerichtet und ist in der Regel in unter einer Minute spielbereit.', 'icon' => 'fa-solid fa-bolt', 'stat' => '< 1 Min', 'stat_label' => 'Einrichtung'],
+    ['title' => 'NVMe-SSD-Speicher', 'description' => 'Moderne NVMe-SSDs sorgen für kurze Ladezeiten und flüssiges Gameplay.', 'icon' => 'fa-solid fa-hard-drive', 'stat' => 'NVMe', 'stat_label' => 'Speicher'],
+    ['title' => 'DDoS-Schutz', 'description' => 'Der Traffic wird über einen abgesicherten Tunnel geleitet – dein Server bleibt auch bei Angriffen erreichbar.', 'icon' => 'fa-solid fa-shield-halved', 'stat' => '24/7', 'stat_label' => 'Schutz'],
+    ['title' => 'Standort Deutschland', 'description' => 'Unsere Hardware steht in Grub am Forst bei Coburg – niedrige Latenz für Spieler aus dem DACH-Raum.', 'icon' => 'fa-solid fa-location-dot', 'stat' => 'DE', 'stat_label' => 'Serverstandort'],
+    ['title' => 'Eigenes Panel', 'description' => 'Starten, stoppen, konfigurieren und Mods verwalten – alles über unser übersichtliches, selbst entwickeltes Panel.', 'icon' => 'fa-solid fa-sliders', 'stat' => '100%', 'stat_label' => 'Kontrolle'],
+    ['title' => 'Durchgehend online', 'description' => 'Dein Server ist rund um die Uhr erreichbar, damit du und deine Community jederzeit spielen könnt.', 'icon' => 'fa-solid fa-server', 'stat' => '24/7', 'stat_label' => 'Erreichbar'],
 ];
 
 $defaultFaqs = [
-    ['question' => 'How do I get started?', 'answer' => 'Simply choose a plan and follow the sign-up process to get started.'],
-    ['question' => 'Can I upgrade my plan later?', 'answer' => 'Yes, you can upgrade or downgrade your plan at any time from your dashboard.'],
-    ['question' => 'Is there a money-back guarantee?', 'answer' => 'We offer a 30-day money-back guarantee on all plans.'],
-    ['question' => 'Do you provide support?', 'answer' => 'Yes, our support team is available 24/7 to assist you.'],
-    ['question' => 'Can I transfer my existing website?', 'answer' => 'Absolutely, we offer free website migration for all new customers.'],
-    ['question' => 'Are backups included?', 'answer' => 'Daily backups are included with every plan to keep your data safe.'],
+    ['question' => 'Wie schnell ist mein Minecraft-Server bereit?', 'answer' => 'Nach der Bestellung wird dein Server automatisch eingerichtet – in der Regel in unter einer Minute. Danach kannst du sofort loslegen.'],
+    ['question' => 'Wo stehen die Server?', 'answer' => 'Unsere Hardware steht in Deutschland, in Grub am Forst bei Coburg. Das sorgt für niedrige Latenzen, besonders für Spieler aus dem DACH-Raum.'],
+    ['question' => 'Ist mein Server vor DDoS-Angriffen geschützt?', 'answer' => 'Ja. Der Traffic wird über einen abgesicherten Tunnel geleitet, sodass dein Server auch bei Angriffen erreichbar bleibt.'],
+    ['question' => 'Kann ich RAM, CPU und Speicher später anpassen?', 'answer' => 'Ja, du kannst die Ausstattung deines Servers jederzeit bequem in deinem Kundenbereich erweitern oder reduzieren.'],
+    ['question' => 'Welche Hardware kommt zum Einsatz?', 'answer' => 'Wir setzen auf moderne NVMe-SSDs für kurze Ladezeiten und ein flüssiges Spielerlebnis.'],
+    ['question' => 'Wie verwalte ich meinen Server?', 'answer' => 'Über unser eigenes, übersichtliches Panel kannst du deinen Server starten, stoppen, konfigurieren sowie Plugins und Mods verwalten.'],
+    ['question' => 'Was kostet ein Minecraft-Server?', 'answer' => 'Unsere Minecraft-Server starten ab 5 € im Monat. Den genauen Preis bestimmst du selbst über die gewählten RAM-, CPU- und Speicheroptionen.'],
 ];
 
 $faqs = theme('faqs', $defaultFaqs);

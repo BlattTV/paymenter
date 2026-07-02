@@ -57,10 +57,10 @@
     @endif
     @isset($title)
     <meta content="{{ isset($title) ? $title . ' - ' . config('app.name', 'Paymenter') : config('app.name', 'Paymenter') }}" property="og:title">
-    <meta content="{{ isset($title) ? config('app.name', 'Paymenter') . ' - ' . $title : config('app.name', 'Paymenter') }}" name="title">
+    <meta content="{{ isset($title) ? $title . ' - ' . config('app.name', 'Paymenter') : config('app.name', 'Paymenter') }}" name="title">
     @endisset
     @php
-        $metaDescription = $description ?? theme('meta_description', '');
+        $metaDescription = $description ?? theme('meta_description', 'Minecraft Server mieten bei Hoelni-Hosting – leistungsstarke Gameserver mit NVMe-SSDs, DDoS-Schutz, Sofort-Setup und eigenem Panel. Serverstandort Deutschland, ab 5 € im Monat.');
         $metaImage = $image ?? null;
         $metaSiteName = theme('meta_site_name', config('app.name', 'Paymenter'));
         $themeMetaImage = theme('meta_image', '');

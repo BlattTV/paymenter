@@ -56,24 +56,22 @@
     }
 
     $defaultReasons = [
-        ['title' => 'Instant Setup', 'description' => 'Get online in minutes with our instant provisioning.', 'icon' => 'fa-solid fa-bolt', 'stat' => '1 min', 'stat_label' => 'Setup Time'],
-        ['title' => '99.9% Uptime', 'description' => 'Our servers are monitored 24/7 for maximum uptime.', 'icon' => 'fa-solid fa-server', 'stat' => '99.9%', 'stat_label' => 'Uptime'],
-        ['title' => 'DDoS Protection', 'description' => 'Advanced DDoS protection keeps your site safe.', 'icon' => 'fa-solid fa-shield-alt', 'stat' => '24/7', 'stat_label' => 'Protection'],
-        ['title' => 'Global Reach', 'description' => 'Serve your content quickly to users around the world.', 'icon' => 'fa-solid fa-globe', 'stat' => '40+', 'stat_label' => 'Countries Served'],
-        ['title' => 'Powerful Databases', 'description' => 'Fast and reliable data storage for demanding applications.', 'icon' => 'fa-solid fa-database', 'stat' => '500GB', 'stat_label' => 'Max Capacity'],
-        ['title' => 'Free SSL', 'description' => 'SSL certificates are included at no additional cost.', 'icon' => 'fa-solid fa-lock', 'stat' => '100%', 'stat_label' => 'Encrypted'],
-        ['title' => '24/7 Support', 'description' => 'Dedicated team available day and night for all your needs.', 'icon' => 'fa-solid fa-headset', 'stat' => '99%', 'stat_label' => 'Satisfaction'],
-        ['title' => 'Seamless Migration', 'description' => 'Move your existing site at no extra cost, without downtime.', 'icon' => 'fa-solid fa-sync-alt', 'stat' => '0', 'stat_label' => 'Downtime'],
-        ['title' => 'Eco-Friendly Hosting', 'description' => 'Powered by renewable energy, making a difference for the planet.', 'icon' => 'fa-solid fa-leaf', 'stat' => '100%', 'stat_label' => 'Renewable'],
+        ['title' => 'Sofort startklar', 'description' => 'Dein Minecraft-Server wird automatisch eingerichtet und ist in der Regel in unter einer Minute spielbereit.', 'icon' => 'fa-solid fa-bolt', 'stat' => '< 1 Min', 'stat_label' => 'Einrichtung'],
+        ['title' => 'NVMe-SSD-Speicher', 'description' => 'Moderne NVMe-SSDs sorgen für kurze Ladezeiten und flüssiges Gameplay.', 'icon' => 'fa-solid fa-hard-drive', 'stat' => 'NVMe', 'stat_label' => 'Speicher'],
+        ['title' => 'DDoS-Schutz', 'description' => 'Der Traffic wird über einen abgesicherten Tunnel geleitet – dein Server bleibt auch bei Angriffen erreichbar.', 'icon' => 'fa-solid fa-shield-halved', 'stat' => '24/7', 'stat_label' => 'Schutz'],
+        ['title' => 'Standort Deutschland', 'description' => 'Unsere Hardware steht in Grub am Forst bei Coburg – niedrige Latenz für Spieler aus dem DACH-Raum.', 'icon' => 'fa-solid fa-location-dot', 'stat' => 'DE', 'stat_label' => 'Serverstandort'],
+        ['title' => 'Eigenes Panel', 'description' => 'Starten, stoppen, konfigurieren und Mods verwalten – alles über unser übersichtliches, selbst entwickeltes Panel.', 'icon' => 'fa-solid fa-sliders', 'stat' => '100%', 'stat_label' => 'Kontrolle'],
+        ['title' => 'Durchgehend online', 'description' => 'Dein Server ist rund um die Uhr erreichbar, damit du und deine Community jederzeit spielen könnt.', 'icon' => 'fa-solid fa-server', 'stat' => '24/7', 'stat_label' => 'Erreichbar'],
     ];
 
     $defaultFaqs = [
-        ['question' => 'How do I get started?', 'answer' => 'Simply choose a plan and follow the sign-up process to get started.'],
-        ['question' => 'Can I upgrade my plan later?', 'answer' => 'Yes, you can upgrade or downgrade your plan at any time from your dashboard.'],
-        ['question' => 'Is there a money-back guarantee?', 'answer' => 'We offer a 30-day money-back guarantee on all plans.'],
-        ['question' => 'Do you provide support?', 'answer' => 'Yes, our support team is available 24/7 to assist you.'],
-        ['question' => 'Can I transfer my existing website?', 'answer' => 'Absolutely, we offer free website migration for all new customers.'],
-        ['question' => 'Are backups included?', 'answer' => 'Daily backups are included with every plan to keep your data safe.'],
+        ['question' => 'Wie schnell ist mein Minecraft-Server bereit?', 'answer' => 'Nach der Bestellung wird dein Server automatisch eingerichtet – in der Regel in unter einer Minute. Danach kannst du sofort loslegen.'],
+        ['question' => 'Wo stehen die Server?', 'answer' => 'Unsere Hardware steht in Deutschland, in Grub am Forst bei Coburg. Das sorgt für niedrige Latenzen, besonders für Spieler aus dem DACH-Raum.'],
+        ['question' => 'Ist mein Server vor DDoS-Angriffen geschützt?', 'answer' => 'Ja. Der Traffic wird über einen abgesicherten Tunnel geleitet, sodass dein Server auch bei Angriffen erreichbar bleibt.'],
+        ['question' => 'Kann ich RAM, CPU und Speicher später anpassen?', 'answer' => 'Ja, du kannst die Ausstattung deines Servers jederzeit bequem in deinem Kundenbereich erweitern oder reduzieren.'],
+        ['question' => 'Welche Hardware kommt zum Einsatz?', 'answer' => 'Wir setzen auf moderne NVMe-SSDs für kurze Ladezeiten und ein flüssiges Spielerlebnis.'],
+        ['question' => 'Wie verwalte ich meinen Server?', 'answer' => 'Über unser eigenes, übersichtliches Panel kannst du deinen Server starten, stoppen, konfigurieren sowie Plugins und Mods verwalten.'],
+        ['question' => 'Was kostet ein Minecraft-Server?', 'answer' => 'Unsere Minecraft-Server starten ab 5 € im Monat. Den genauen Preis bestimmst du selbst über die gewählten RAM-, CPU- und Speicheroptionen.'],
     ];
 
     $reasons = theme('reasons', $defaultReasons);
@@ -201,23 +199,23 @@
                                 </div>
                             @endif
                             <h1 class="text-4xl md:text-6xl font-semibold tracking-tight leading-[1.05]">
-                                <span class="{{ $heroGradientEnabled ? 'text-white' : 'text-base' }} block font-[700]">{{ theme('title1', 'Lightning Fast') }}</span>
-                                <span class="{{ $heroGradientEnabled ? 'text-white' : 'text-base' }} block font-[700]">{{ theme('title2', 'Web Hosting') }}</span>
+                                <span class="{{ $heroGradientEnabled ? 'text-white' : 'text-base' }} block font-[700]">{{ theme('title1', 'Minecraft Server mieten') }}</span>
+                                <span class="{{ $heroGradientEnabled ? 'text-white' : 'text-base' }} block font-[700]">{{ theme('title2', 'aus Deutschland') }}</span>
                             </h1>
 
                             <p class="text-lg md:text-xl {{ $heroGradientEnabled ? 'text-white' : 'text-base/70' }} leading-relaxed max-w-xl">
-                                {{ theme('hero_text', 'Deploy your websites with confidence. Our premium hosting infrastructure delivers unmatched performance, security, and reliability.') }}
+                                {{ theme('hero_text', 'Starte deinen eigenen Minecraft-Server in unter einer Minute – auf leistungsstarker NVMe-Hardware mit DDoS-Schutz, eigenem Panel und Serverstandort in Deutschland. Sofort einsatzbereit und jederzeit erweiterbar.') }}
                             </p>
                         </div>
 
                         <div class="flex flex-row gap-3 sm:gap-5">
                             <a href="{{ theme('button1link', '#') }}" class="text-white bg-primary hover:bg-primary/90 px-4 py-2 sm:px-6 sm:py-3 rounded-[var(--button-radius)] font-semibold transition flex gap-2 sm:gap-3 items-center text-sm">
                                 <i class="fa fa-rocket mr-1"></i>
-                                {{ theme('button1text', 'Get Started') }}
+                                {{ theme('button1text', 'Server mieten') }}
                             </a>
                             <a href="{{ theme('button2link', '#') }}" class="{{ $heroGradientEnabled ? 'bg-white text-black' : 'bg-background-secondary text-base border border-neutral' }} px-4 py-2 sm:px-6 sm:py-3 rounded-[var(--button-radius)] font-semibold transition flex gap-2 sm:gap-3 items-center text-sm">
                                 <i class="fa fa-list-alt mr-1"></i>
-                                {{ theme('button2text', 'View Plans') }}
+                                {{ theme('button2text', 'Preise ansehen') }}
                             </a>
                         </div>
                     </div>
@@ -254,7 +252,7 @@
             <section class="py-16 md:py-24 md:pt-12">
                 <div class="container mx-auto px-6 lg:max-w-7xl lg:px-8">
                     <p class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
-                        {{ theme('features_section_title', 'Everything you need to deploy your app') }}
+                        {{ theme('features_section_title', 'Alles, was dein Minecraft-Server braucht') }}
                     </p>
                     <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
                         <div class="relative lg:row-span-2">
@@ -576,10 +574,10 @@
                 <div class="container mx-auto max-w-7xl px-6 lg:px-8">
                     <div class="mx-auto max-w-2xl sm:text-center">
                         <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl sm:text-balance">
-                            {{ theme('reasons_section_title', "We've got you covered") }}
+                            {{ theme('reasons_section_title', 'Warum Hoelni-Hosting?') }}
                         </p>
                         <p class="mt-6 text-lg text-muted">
-                            {{ theme('reasons_section_subtitle', 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.') }}
+                            {{ theme('reasons_section_subtitle', 'Leistungsstarkes Minecraft-Hosting aus Deutschland – schnell, zuverlässig und ohne versteckte Kosten.') }}
                         </p>
                     </div>
                 </div>
@@ -615,8 +613,8 @@
             <section class="py-16 md:py-24">
                 <div class="container mx-auto" style="max-width: var(--container-max-width) px-6">
                     <div class="text-center space-y-4 mb-10">
-                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">{{ theme('faq_section_title', 'Frequently Asked Questions') }}</h2>
-                        <p class="text-lg text-muted leading-relaxed max-w-2xl mx-auto">{{ theme('faq_section_subtitle', "Got questions? We've got answers. Find everything you need to know about our hosting services.") }}</p>
+                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">{{ theme('faq_section_title', 'Häufige Fragen zu Minecraft-Servern') }}</h2>
+                        <p class="text-lg text-muted leading-relaxed max-w-2xl mx-auto">{{ theme('faq_section_subtitle', 'Alles Wichtige rund um dein Minecraft-Hosting bei Hoelni-Hosting.') }}</p>
                     </div>
 
                     <div class="w-full max-w-3xl mx-auto space-y-3">

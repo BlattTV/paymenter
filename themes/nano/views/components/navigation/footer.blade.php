@@ -1,5 +1,5 @@
 @php
-    $footerDescription = theme('footer_description', 'High-performance cloud infrastructure for developers. Built for speed, security, and scalability.');
+    $footerDescription = theme('footer_description', 'Hoelni-Hosting – leistungsstarke Minecraft-Gameserver aus Deutschland. NVMe-SSDs, DDoS-Schutz, Sofort-Setup und eigenes Panel.');
     $footerColumns = theme('footer_columns', [
         [
             'title' => 'Services',
