@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Ellenőrizd a rendelésed',
     'one_time' => 'Egyszeri',
     'select_plan' => 'Válassz egy csomagot',
+    'withdrawal_consent' => 'Kifejezetten kérem, hogy a szolgáltatás teljesítése az elállási határidő lejárta előtt megkezdődjön. Tudomásul veszem, hogy a szerződés teljes teljesítésével elveszítem elállási jogomat.',
+    'incl_vat' => 'áfával',
 ];

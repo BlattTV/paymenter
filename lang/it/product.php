@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Controlla il tuo ordine',
     'one_time' => 'Pagamento una tantum',
     'select_plan' => 'Seleziona un piano',
+    'withdrawal_consent' => 'Richiedo espressamente che l\'esecuzione del servizio inizi prima della scadenza del termine di recesso. Sono consapevole che perderò il mio diritto di recesso una volta che il contratto sarà stato completamente eseguito.',
+    'incl_vat' => 'IVA incl.',
 ];

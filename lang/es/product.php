@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Revisa tu pedido',
     'one_time' => 'Pago único',
     'select_plan' => 'Selecciona un plan',
+    'withdrawal_consent' => 'Solicito expresamente que la prestación del servicio comience antes de que finalice el plazo de desistimiento. Sé que perderé mi derecho de desistimiento una vez que el contrato se haya ejecutado por completo.',
+    'incl_vat' => 'IVA incl.',
 ];

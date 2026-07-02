@@ -47,4 +47,7 @@ return [
     'user_menu' => 'Menu do utilizador',
     'from' => 'A partir de',
     'pagination' => 'Paginação',
+    'cookie_notice' => 'Utilizamos cookies e tecnologias semelhantes para fins de análise e marketing. Só são carregados com o seu consentimento.',
+    'cookie_accept' => 'Aceitar',
+    'cookie_decline' => 'Apenas necessários',
 ];

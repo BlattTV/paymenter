@@ -93,28 +93,42 @@
 
     <meta name="robots" content="{{ theme('meta_robots', 'index,follow') }}">
 
-    @if(theme('google_analytics_id'))
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ theme('google_analytics_id') }}"></script>
+    {{-- Analytics scripts are only loaded after the visitor consented (TTDSG/GDPR) --}}
+    @php
+        $analyticsConfigured = theme('google_analytics_id') || theme('facebook_pixel_id') || theme('microsoft_clarity_id');
+    @endphp
+    @if($analyticsConfigured)
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ theme('google_analytics_id') }}');
-    </script>
-    @endif
-
-    @if(theme('facebook_pixel_id'))
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '{{ theme('facebook_pixel_id') }}');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id={{ theme('facebook_pixel_id') }}&ev=PageView&noscript=1"/></noscript>
-    @endif
-
-    @if(theme('microsoft_clarity_id'))
-    <script>
-        (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","{{ theme('microsoft_clarity_id') }}");
+        (function () {
+            var loaded = false;
+            window.pmLoadAnalytics = function () {
+                if (loaded) return;
+                loaded = true;
+                @if(theme('google_analytics_id'))
+                var ga = document.createElement('script');
+                ga.async = true;
+                ga.src = 'https://www.googletagmanager.com/gtag/js?id={{ theme('google_analytics_id') }}';
+                document.head.appendChild(ga);
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = window.gtag || function(){dataLayer.push(arguments);};
+                gtag('js', new Date());
+                gtag('config', '{{ theme('google_analytics_id') }}');
+                @endif
+                @if(theme('facebook_pixel_id'))
+                !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '{{ theme('facebook_pixel_id') }}');
+                fbq('track', 'PageView');
+                @endif
+                @if(theme('microsoft_clarity_id'))
+                (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","{{ theme('microsoft_clarity_id') }}");
+                @endif
+            };
+            try {
+                if (localStorage.getItem('pm_cookie_consent') === 'granted') {
+                    window.pmLoadAnalytics();
+                }
+            } catch (e) {}
+        })();
     </script>
     @endif
 
@@ -308,6 +322,42 @@
     {!! hook('footer') !!}
     @if(theme('custom_js'))
     <script>{!! theme('custom_js') !!}</script>
+    @endif
+
+    {{-- Cookie consent banner: only rendered when analytics IDs are configured --}}
+    @if($analyticsConfigured ?? false)
+    <div id="pm-cookie-banner" style="display: none;"
+        class="fixed bottom-4 inset-x-4 sm:inset-x-auto sm:right-6 sm:max-w-md z-50 bg-background-secondary border border-neutral rounded-[var(--card-radius)] shadow-[var(--card-shadow)] p-4 sm:p-5">
+        <p class="text-sm text-base mb-4">{{ __('general.cookie_notice') }}</p>
+        <div class="flex flex-col sm:flex-row gap-2">
+            <button type="button" id="pm-cookie-accept"
+                class="flex-1 bg-primary text-white text-sm font-semibold py-2 px-4 rounded-[var(--button-radius)] hover:bg-primary/90 transition-colors cursor-pointer">
+                {{ __('general.cookie_accept') }}
+            </button>
+            <button type="button" id="pm-cookie-decline"
+                class="flex-1 bg-background border border-neutral text-base text-sm font-semibold py-2 px-4 rounded-[var(--button-radius)] hover:bg-background/70 transition-colors cursor-pointer">
+                {{ __('general.cookie_decline') }}
+            </button>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var banner = document.getElementById('pm-cookie-banner');
+            if (!banner) return;
+            var stored = null;
+            try { stored = localStorage.getItem('pm_cookie_consent'); } catch (e) {}
+            if (!stored) banner.style.display = 'block';
+            document.getElementById('pm-cookie-accept').addEventListener('click', function () {
+                try { localStorage.setItem('pm_cookie_consent', 'granted'); } catch (e) {}
+                banner.style.display = 'none';
+                if (window.pmLoadAnalytics) window.pmLoadAnalytics();
+            });
+            document.getElementById('pm-cookie-decline').addEventListener('click', function () {
+                try { localStorage.setItem('pm_cookie_consent', 'denied'); } catch (e) {}
+                banner.style.display = 'none';
+            });
+        })();
+    </script>
     @endif
 </body>
 

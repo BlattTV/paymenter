@@ -102,7 +102,7 @@
                 <x-button.primary wire:click="checkout" wire:loading.attr="disabled">
                     <x-loading target="checkout" />
                     <div wire:loading.remove wire:target="checkout">
-                        {{ ($total->price ?? 0) > 0 ? __('product.checkout') : __('product.order_free') }}
+                        {{ __('product.add_to_cart') }}
                     </div>
                 </x-button.primary>
             </div>

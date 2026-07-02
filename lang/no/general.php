@@ -47,4 +47,7 @@ return [
     'user_menu' => 'Brukermeny',
     'from' => 'Fra',
     'pagination' => 'Sideinndeling',
+    'cookie_notice' => 'Vi bruker informasjonskapsler og lignende teknologier til analyse- og markedsføringsformål. De lastes kun med ditt samtykke.',
+    'cookie_accept' => 'Godta',
+    'cookie_decline' => 'Kun nødvendige',
 ];

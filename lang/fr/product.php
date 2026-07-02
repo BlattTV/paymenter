@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Vérifiez votre commande',
     'one_time' => 'Paiement unique',
     'select_plan' => 'Sélectionnez un forfait',
+    'withdrawal_consent' => 'Je demande expressément que l\'exécution du service commence avant la fin du délai de rétractation. Je reconnais perdre mon droit de rétractation une fois le contrat entièrement exécuté.',
+    'incl_vat' => 'TVA incl.',
 ];

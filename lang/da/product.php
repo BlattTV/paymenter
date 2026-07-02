@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Gennemgå din bestilling',
     'one_time' => 'Engangsbetaling',
     'select_plan' => 'Vælg en plan',
+    'withdrawal_consent' => 'Jeg anmoder udtrykkeligt om, at leveringen af tjenesten påbegyndes inden fortrydelsesfristens udløb. Jeg er indforstået med, at jeg mister min fortrydelsesret, når aftalen er fuldt opfyldt.',
+    'incl_vat' => 'inkl. moms',
 ];

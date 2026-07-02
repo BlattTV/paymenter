@@ -47,4 +47,7 @@ return [
     'user_menu' => 'Gebruikersmenu',
     'from' => 'Vanaf',
     'pagination' => 'Paginering',
+    'cookie_notice' => 'Wij gebruiken cookies en vergelijkbare technologieën voor analyse- en marketingdoeleinden. Deze worden alleen met je toestemming geladen.',
+    'cookie_accept' => 'Accepteren',
+    'cookie_decline' => 'Alleen noodzakelijke',
 ];

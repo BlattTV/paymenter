@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Granska din beställning',
     'one_time' => 'Engångsbetalning',
     'select_plan' => 'Välj en plan',
+    'withdrawal_consent' => 'Jag begär uttryckligen att tjänsten börjar utföras innan ångerfristen har löpt ut. Jag är medveten om att jag förlorar min ångerrätt när avtalet har fullgjorts helt.',
+    'incl_vat' => 'inkl. moms',
 ];

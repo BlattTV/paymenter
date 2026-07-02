@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Reveja a sua encomenda',
     'one_time' => 'Pagamento único',
     'select_plan' => 'Selecione um plano',
+    'withdrawal_consent' => 'Solicito expressamente que a execução do serviço comece antes do fim do prazo de livre resolução. Tenho conhecimento de que perco o meu direito de livre resolução assim que o contrato estiver totalmente executado.',
+    'incl_vat' => 'IVA incl.',
 ];

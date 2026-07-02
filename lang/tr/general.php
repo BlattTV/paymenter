@@ -47,4 +47,7 @@ return [
     'user_menu' => 'Kullanıcı menüsü',
     'from' => 'Başlangıç',
     'pagination' => 'Sayfalandırma',
+    'cookie_notice' => 'Analiz ve pazarlama amaçlarıyla çerezler ve benzer teknolojiler kullanıyoruz. Bunlar yalnızca onayınızla yüklenir.',
+    'cookie_accept' => 'Kabul et',
+    'cookie_decline' => 'Yalnızca gerekli olanlar',
 ];

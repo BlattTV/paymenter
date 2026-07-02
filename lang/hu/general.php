@@ -47,4 +47,7 @@ return [
     'user_menu' => 'Felhasználói menü',
     'from' => 'Ettől',
     'pagination' => 'Lapozás',
+    'cookie_notice' => 'Sütiket és hasonló technológiákat használunk elemzési és marketingcélokra. Ezek csak a hozzájárulásoddal töltődnek be.',
+    'cookie_accept' => 'Elfogadom',
+    'cookie_decline' => 'Csak a szükségesek',
 ];

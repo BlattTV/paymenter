@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Tarkista tilauksesi',
     'one_time' => 'Kertamaksu',
     'select_plan' => 'Valitse paketti',
+    'withdrawal_consent' => 'Pyydän nimenomaisesti, että palvelun suorittaminen aloitetaan ennen peruuttamisajan päättymistä. Olen tietoinen siitä, että menetän peruuttamisoikeuteni, kun sopimus on kokonaan täytetty.',
+    'incl_vat' => 'sis. alv',
 ];

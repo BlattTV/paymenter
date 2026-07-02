@@ -6,7 +6,8 @@
     $subtotalText = translate('invoices.subtotal', 'Subtotal');
     $planText = translate('services.plan', 'Plan');
     $totalTodayText = translate('product.total_today', 'Total today');
-    $checkoutText = translate('product.checkout', 'Checkout');
+    // This button only adds the product to the cart; the binding order happens on the cart page
+    $checkoutText = translate('product.add_to_cart', 'Add to cart');
 @endphp
 
 <div>
@@ -203,7 +204,7 @@
             @if (($product->stock > 0 || !$product->stock) && $product->price()->available)
                 <div class="mt-4">
                     <x-button.primary wire:click="checkout" wire:loading.attr="disabled">
-                        {{ ($total->price ?? 0) > 0 ? $checkoutText : translate('product.order_free', 'Order for free') }}
+                        {{ $checkoutText }}
                     </x-button.primary>
                 </div>
             @endif

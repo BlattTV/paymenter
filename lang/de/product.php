@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Überprüfen Sie Ihre Bestellung',
     'one_time' => 'Einmalig',
     'select_plan' => 'Tarif auswählen',
+    'withdrawal_consent' => 'Ich verlange ausdrücklich, dass mit der Ausführung der Dienstleistung vor Ablauf der Widerrufsfrist begonnen wird. Mir ist bekannt, dass ich mein Widerrufsrecht bei vollständiger Vertragserfüllung verliere.',
+    'incl_vat' => 'inkl. MwSt.',
 ];

@@ -10,15 +10,12 @@ return [
     'total_today' => 'Total today',
     'subtotal' => 'Subtotal',
     'total' => 'Total',
-
     'then_after_x' => 'Then after :time',
     'order_summary' => 'Order Summary',
     'edit' => 'Edit',
-
     'apply' => 'Apply',
     'price' => 'Price',
     'setup_fee' => 'Setup fee',
-
     'in_stock' => 'In stock',
     'out_of_stock' => 'Product :product is out of stock',
     'user_limit' => 'You have reached the limit of :product',
@@ -27,7 +24,6 @@ return [
     'tos' => 'I agree to the ',
     'tos_link' => 'Terms of Service',
     'tos_required' => 'You must agree to the Terms of Service',
-
     'description' => 'Description',
     'configure' => 'Configure',
     'configure_options' => 'Configure your options',
@@ -39,4 +35,6 @@ return [
     'review_order_description' => 'Review your order',
     'one_time' => 'One-time',
     'select_plan' => 'Select a plan',
+    'withdrawal_consent' => 'I expressly request that the service begins before the end of the withdrawal period. I acknowledge that I lose my right of withdrawal once the contract has been fully performed.',
+    'incl_vat' => 'incl. VAT',
 ];

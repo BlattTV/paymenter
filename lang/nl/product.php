@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Controleer je bestelling',
     'one_time' => 'Eenmalig',
     'select_plan' => 'Kies een pakket',
+    'withdrawal_consent' => 'Ik verzoek uitdrukkelijk dat de uitvoering van de dienst begint vóór het einde van de herroepingstermijn. Ik ben mij ervan bewust dat ik mijn herroepingsrecht verlies zodra de overeenkomst volledig is uitgevoerd.',
+    'incl_vat' => 'incl. btw',
 ];

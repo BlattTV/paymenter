@@ -298,9 +298,16 @@ function getConfigIcon($optionName, $icons) {
                         <div class="flex flex-col">
                             <span class="text-sm font-medium text-muted">{{ translate('invoices.total', 'Total') }} {{ translate('product.due_today', 'Due today') }}</span>
                             <span class="text-3xl font-bold text-base tracking-tight">{{ $total->format($total->total) }}</span>
+                            @if (config('settings.tax_enabled') && ($total->tax ?? 0) > 0)
+                                <span class="text-xs text-muted">{{ __('product.incl_vat') }}</span>
+                            @endif
                         </div>
                     </div>
 
+                    @php
+                        $showWithdrawalConsent = theme('checkout_withdrawal_checkbox', true) && ($total->price ?? 0) > 0;
+                    @endphp
+                    <div x-data="{ withdrawalConsent: @js(!$showWithdrawalConsent) }" class="flex flex-col gap-4">
                     @if (config('settings.tos'))
                         <x-form.checkbox wire:model="tos" name="tos">
                             {{ translate('product.tos', 'Terms of Service') }}
@@ -311,7 +318,15 @@ function getConfigIcon($optionName, $icons) {
                         </x-form.checkbox>
                     @endif
 
-                    <x-button.primary wire:click="checkout" wire:loading.attr="disabled" class="w-full py-3.5">
+                    @if ($showWithdrawalConsent)
+                        <label class="flex items-start gap-2.5 text-sm text-base/80 cursor-pointer">
+                            <input type="checkbox" x-model="withdrawalConsent"
+                                class="mt-0.5 shrink-0 rounded border-neutral text-primary focus:ring-primary cursor-pointer">
+                            <span>{{ __('product.withdrawal_consent') }}</span>
+                        </label>
+                    @endif
+
+                    <x-button.primary x-bind:disabled="!withdrawalConsent" wire:click="checkout" wire:loading.attr="disabled" class="w-full py-3.5">
                         <x-loading target="checkout" />
                         <div class="flex items-center justify-center gap-2 no-wrap" wire:loading.remove wire:target="checkout">
                             <span>{{ ($total->price ?? 0) > 0 ? translate('product.checkout', 'Buy now') : translate('product.order_free', 'Order for free') }}</span>
@@ -320,6 +335,7 @@ function getConfigIcon($optionName, $icons) {
                             </svg>
                         </div>
                     </x-button.primary>
+                    </div>
                 </div>
             @endif
             

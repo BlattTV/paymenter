@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'input' => [
         'first_name' => 'First name',
         'first_name_placeholder' => 'Your first name',
@@ -25,18 +24,14 @@ return [
         'zip_placeholder' => 'Your ZIP code',
         'state' => 'State',
         'state_placeholder' => 'Your state',
-
         'password' => 'Password',
         'password_placeholder' => 'Your password',
-
         'password_confirmation' => 'Confirm Password',
         'password_confirmation_placeholder' => 'Confirm your password',
     ],
-
     'all_rights_reserved' => 'All rights reserved.',
     'update' => 'Update',
     'save' => 'Save',
-
     'loading' => 'Loading...',
     'previous' => 'Previous',
     'next' => 'Next',
@@ -52,4 +47,7 @@ return [
     'user_menu' => 'User menu',
     'from' => 'From',
     'pagination' => 'Pagination',
+    'cookie_notice' => 'We use cookies and similar technologies for analytics and marketing purposes. They are only loaded with your consent.',
+    'cookie_accept' => 'Accept',
+    'cookie_decline' => 'Necessary only',
 ];

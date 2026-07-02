@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Sprawdź swoje zamówienie',
     'one_time' => 'Jednorazowo',
     'select_plan' => 'Wybierz plan',
+    'withdrawal_consent' => 'Wyraźnie żądam rozpoczęcia świadczenia usługi przed upływem terminu odstąpienia od umowy. Przyjmuję do wiadomości, że tracę prawo odstąpienia od umowy po jej pełnym wykonaniu.',
+    'incl_vat' => 'z VAT',
 ];

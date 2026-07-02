@@ -47,4 +47,7 @@ return [
     'user_menu' => 'Käyttäjävalikko',
     'from' => 'Alkaen',
     'pagination' => 'Sivutus',
+    'cookie_notice' => 'Käytämme evästeitä ja vastaavia tekniikoita analytiikka- ja markkinointitarkoituksiin. Ne ladataan vain suostumuksellasi.',
+    'cookie_accept' => 'Hyväksy',
+    'cookie_decline' => 'Vain välttämättömät',
 ];

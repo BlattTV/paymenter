@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Se over bestillingen din',
     'one_time' => 'Engangsbetaling',
     'select_plan' => 'Velg en plan',
+    'withdrawal_consent' => 'Jeg ber uttrykkelig om at utførelsen av tjenesten starter før angrefristen utløper. Jeg er innforstått med at jeg mister angreretten når avtalen er fullstendig oppfylt.',
+    'incl_vat' => 'inkl. mva',
 ];

@@ -35,4 +35,6 @@ return [
     'review_order_description' => 'Siparişini gözden geçir',
     'one_time' => 'Tek seferlik',
     'select_plan' => 'Bir plan seç',
+    'withdrawal_consent' => 'Hizmetin ifasına cayma süresi dolmadan önce başlanmasını açıkça talep ediyorum. Sözleşme tamamen ifa edildiğinde cayma hakkımı kaybedeceğimi biliyorum.',
+    'incl_vat' => 'KDV dahil',
 ];

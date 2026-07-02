@@ -92,8 +92,14 @@
                 <div class="text-lg font-semibold flex justify-between mt-1">
                     <h4>{{ __('invoices.total') }}:</h4> {{ $total->format($total->total) }}
                 </div>
+                @if (config('settings.tax_enabled') && ($total->tax ?? 0) > 0)
+                    <div class="text-xs text-right text-base/60">{{ __('product.incl_vat') }}</div>
+                @endif
 
-                <div class="flex flex-col gap-2 w-full col-span-1">
+                @php
+                    $showWithdrawalConsent = theme('checkout_withdrawal_checkbox', true) && ($total->price ?? 0) > 0;
+                @endphp
+                <div x-data="{ withdrawalConsent: @js(!$showWithdrawalConsent) }" class="flex flex-col gap-2 w-full col-span-1">
                     @if(config('settings.tos'))
                     <x-form.checkbox wire:model="tos" name="tos">
                         {{ __('product.tos') }}
@@ -103,8 +109,15 @@
                     </x-form.checkbox>
                     @endif
 
+                    @if ($showWithdrawalConsent)
+                        <label class="flex items-start gap-2 text-sm cursor-pointer">
+                            <input type="checkbox" x-model="withdrawalConsent" class="mt-0.5 shrink-0 rounded cursor-pointer">
+                            <span>{{ __('product.withdrawal_consent') }}</span>
+                        </label>
+                    @endif
+
                     <div class="flex flex-row justify-end gap-2">
-                        <x-button.primary wire:click="checkout" class="h-fit" wire:loading.attr="disabled">
+                        <x-button.primary x-bind:disabled="!withdrawalConsent" wire:click="checkout" class="h-fit" wire:loading.attr="disabled">
                             <x-loading target="checkout" />
                             <div wire:loading.remove wire:target="checkout">
                                 {{ ($total->price ?? 0) > 0 ? __('product.checkout') : __('product.order_free') }}
